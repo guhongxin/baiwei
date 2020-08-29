@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./style/index.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="menu">
+      <div class="logo">
+        <img src="./img/logo.png" />
+      </div>
+      <ul>
+        <li>
+          <a href="./index.html" class="active-menu">HOME PAGE</a>
+        </li>
+        <li>
+          <a href="./number.html">NUMBER</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="right-head">
+        <div class="card-box">
+          <div class="card latestbatch" style="background: url(../img/rect4@2x.png), linear-gradient(to bottom, #040c2e 0%,#082670 100%);
+    background-repeat: round;">
+            <div class="card-title">Latest batch</div>
+            <div class="card-content">
+              <div class="card-content-left" id="halfPie1"></div>
+              <div class="card-content-right">
+                <div class="card-content-txt " >Batch No.: <span class="batchNo">0</span></div>
+                <!-- <div class="card-content-txt">Time: 20:20</div> -->
+                <div class="card-content-txt">Brand: <span class="brandName">0</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card monthlyOEE" style="background: url(../img/rect4@2x.png), linear-gradient(to bottom, #040c2e 0%,#082670 100%);
+    background-repeat: round;">
+            <div class="card-title">Monthly OEE</div>
+            <div class="card-content">
+              <div class="card-content-left" id="halfPie2"></div>
+              <div class="card-content-right">
+                <div class="card-content-txt">Quantity: <span class="quantity">0</span></div>
+                <!-- <div class="card-content-txt">Time: 20:20</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card annualOEE" style="background: url(../img/rect4@2x.png), linear-gradient(to bottom, #132442 0%,#2b2344 100%);
+    background-repeat: round;">
+            <div class="card-title">Annual OEE</div>
+            <div class="card-content">
+              <div class="card-content-left" id="halfPie3"></div>
+              <div class="card-content-right">
+                <div class="card-content-txt">Quantity: <span class="quantity">0</span></div>
+                <!-- <div class="card-content-txt">Time: 20:20</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-box">
+          <div class="card time-card" style="background: url(../img/rect4@2x.png), linear-gradient(to bottom, #0a1f43 0%,#0b2a60 100%);
+    background-repeat: round;">
+            <div class="date">Date: 2020-08-25</div>
+            <div class="Week">Week: 二</div>
+            <div class="time">Time: 23:27</div>
+          </div>
+        </div>
+      </div>
+      <div class="plan">
+        <div class="plan-box"  >
+          <div class="boxer" id="boxer">
+            <div class="bgbox">
+              <img src="./img/7114.png">
+            </div>
+            <svg id="myCanvas" xmlns="http://www.w3.org/2000/svg" version="1.1" style="    transform: translate(314px, -21px);    position: absolute;    z-index: 2;">
+                <defs>  
+                   <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                       <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                   </marker>  
+                </defs>  
+              <path d="M0,60 L80,60 L100 90" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+             </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="      width: 139px;  transform: translate(600px, 64px);   position: absolute;    z-index: 2;">
+                <defs>  
+                   <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                       <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                   </marker>  
+                </defs>  
+              <path d="M20,90 L40,30 L130,30" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+             </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="       width: 100px; transform: translate(563px, 207px);   position: absolute;    z-index: 2;">
+                <defs>  
+                   <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                       <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                   </marker>  
+                </defs>  
+              <path d="M20,90 L40,30 L90,30" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+             </svg>
+             <div class="tootipbox tool1" id="tool1">Efficiency: <span class="tool-text">0%</span></div>
+             <div class="tootipbox tool2" id="tool2">Efficiency: <span class="tool-text">0%</span></div>
+             <div class="tootipbox tool3" id="tool3">Efficiency: <span class="tool-text">0%</span></div>
+            <div class="fragment1" data-processname="Rice Outtake">
+              <img src="./img/frament731.png">
+            </div>
+            <div class="fragment2" data-processname="Malt Outtake">
+              <img src="./img/frament732.png">
+            </div>
+            <div class="fragment3" data-processname="Rice Grinding">
+              <img src="./img/frament3@2x.png">
+            </div>
+            <div class="fragment4" data-processname="MASHING VESSEL">
+              <img src="./img/frament4@2x.png">
+            </div>
+            <div class="fragment5" data-processname="Mash Tun 3">
+              <img src="./img/frament5@2x.png">
+            </div>
+            <div class="fragment6" data-processname="Lauter Tun 3">
+              <img src="./img/frament6@2x.png">
+            </div>
+            <div class="fragment7" data-processname="Brew Kettle 4">
+              <img src="./img/frament7@2x.png">
+            </div>
+            <div class="fragment8" data-processname="Whirlpool 3">
+              <img src="./img/frament8@2x.png">
+            </div>
+            <div class="fragment9" data-processname="Wort Cooling 2">
+              <img src="./img/frament9@2x.png">
+            </div>
+          </div>
+        </div>
+        <div class="chart-box1">
+          <div class="chart-box">
+            <div class="batches-bar">
+            <div class="card-title">Last 10 batches</div>
+            <div class="batChart" id="lineChart1"></div>
+            </div>
+            <div class="week-line">
+            <div class="card-title">Batch in the last week</div>
+            <div class="batChart" id="lineChart2"></div>
+            </div>
+            <div class="month-line">
+            <div class="card-title">Last month batch</div>
+             <div class="batChart" id="lineChart3"></div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/jquery-1.8.3.min.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/index.js"></script>
+  <script>
+  function detectZoom() {
+        var ratio = 0,
+        screen = window.screen,
+        ua = navigator.userAgent.toLowerCase();
+        if (window.devicePixelRatio !== undefined) {
+            ratio = window.devicePixelRatio;
+        } else if (~ua.indexOf('msie')) {
+            if (screen.deviceXDPI && screen.logicalXDPI) {
+                ratio = screen.deviceXDPI / screen.logicalXDPI;
+            }
+        } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+            ratio = window.outerWidth / window.innerWidth;
+        }
+        if (ratio) {
+            ratio = Math.round(ratio * 100);
+        }
+        console.log(ratio)
+        return ratio;
+    };
+    var zppm = detectZoom()
+    var doc = document.body || document.getElementsByTagName("body")[0]
+    if (zppm != 125) {
+        doc.style.zoom = 100 + '%'
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./style/reset.css" />
+  <link rel="stylesheet" type="text/css" href="./style/number.css" />
+  <link rel="stylesheet" type="text/css" href="./style/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="./style/bootstrap-datetimepicker.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="menu">
+      <div class="logo">
+        <img src="./img/logo.png" />
+      </div>
+      <ul>
+        <li>
+          <a href="./index.html">HOME PAGE</a>
+        </li>
+        <li>
+          <a href="./number.html" class="active-menu">NUMBER</a>
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div class="search">
+        <div class="form">
+          <div class="form-item col2">
+            <div class="item-label">Time: </div>
+            <div class='input-group date'>
+              <input class="form-control"  id='startDate' type="text" value="" readonly/>
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+            <div class="lijie">至</div>
+            <div class='input-group date'>
+              <input class="form-control"  id='endDate' type="text" value="" readonly/>
+              <span class="input-group-addon">
+              <span class="glyphicon glyphicon-calendar"></span>
+              </span>
+            </div>
+          </div>
+          <div class="form-item wdth15">
+            <div class="item-label">Brand:</div>
+            <select id="brand"></select>
+          </div>
+          <div class="form-item wdth15">
+            <div class="item-label">Batch:</div>
+            <select id="batch">
+            </select>
+          </div>
+          <div class="form-item wdth15">
+            <div class="btn-div" id="searchBtn">Query</div>
+          </div>
+        </div>
+        <div class="cadan">
+          <span class="Duration activePage">Duration</span><span>/</span><span class="Flowchart">Flowchart</span> 
+        </div>
+      </div>
+      <div class="data-box">
+        <div class="tree-box">
+          <div class="tree-box1">
+            <div class="tree-box1-title">Batch number</div>
+            <ul id="tree" class="ztree" style="width:100%; overflow:auto;">
+            </ul>
+          </div>
+        </div>
+        <div class="flow-chart">
+          <div class="boxer" id="boxer">
+            <div class="bgbox">
+              <img src="./img/7114.png">
+            </div>
+            <svg id="myCanvas" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(410px, 20px);    position: absolute;    z-index: 2;">
+              <defs>  
+                 <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                     <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                 </marker>  
+              </defs>  
+            <path d="M0,60 L80,60 L100 90" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="      width: 139px;  transform: translate(850px, 100px);   position: absolute;    z-index: 2;">
+                <defs>  
+                  <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                      <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                  </marker>  
+                </defs>  
+              <path d="M20,90 L40,30 L130,30" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+            </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="       width: 100px; transform: translate(820px, 335px);   position: absolute;    z-index: 2;">
+                <defs>  
+                  <marker id="markerArrow" markerWidth="8" markerHeight="8" refx="0" refy="4" orient="auto">  
+                      <circle cx="4" cy="4" r="4" stroke-width="0" fill="#356771"/>  
+                  </marker>  
+                </defs>  
+              <path d="M20,90 L40,30 L90,30" stroke-width="1" stroke="#356771" fill="transparent" marker-start="url(#markerArrow)" marker-end="url(#markerArrow)"></path>
+            </svg>
+            <div class="tootipbox tool1" id="tool1">Efficiency: <span class="tool-text">50%</span></div>
+            <div class="tootipbox tool2" id="tool2">Efficiency: <span class="tool-text">50%</span></div>
+            <div class="tootipbox tool3" id="tool3">Efficiency: <span class="tool-text">50%</span></div>
+            <div class="fragment fragment1" data-processname="Rice Outtake">
+              <img src="./img/frament731.png">
+            </div>
+            <div class="fragment fragment2" data-processname="Malt Outtake">
+              <img src="./img/frament732.png">
+            </div>
+            <div class="fragment fragment3" data-processname="Rice Grinding">
+              <img src="./img/frament3@2x.png">
+            </div>
+            <div class="fragment fragment4" data-processname="MASHING VESSEL">
+              <img src="./img/frament4@2x.png">
+            </div>
+            <div class="fragment fragment5" data-processname="Mash Tun 3">
+              <img src="./img/frament5@2x.png">
+            </div>
+            <div class="fragment fragment6" data-processname="Lauter Tun 3">
+              <img src="./img/frament6@2x.png">
+            </div>
+            <div class="fragment fragment7" data-processname="Brew Kettle 4">
+              <img src="./img/frament7@2x.png">
+            </div>
+            <div class="fragment fragment8" data-processname="Whirlpool 3">
+              <img src="./img/frament8@2x.png">
+            </div>
+            <div class="fragment fragment9" data-processname="Wort Cooling 2">
+              <img src="./img/frament9@2x.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="module2">
+        <div class="module2-body">
+          <div class="chartbox">
+            <div class="module-body-content-title">Average time of batches per day</div>
+            <div class="chart-box-canvas" id="averageDay"></div>
+          </div>
+          <div class="chartbox">
+            <div class="module-body-content-title">Average time of batches per week</div>
+            <div class="chart-box-canvas" id="averageWeek"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/jquery-1.8.3.min.js"></script>
+  <script src="./js/bootstrap.js"></script>
+  <script src="./js/bootstrap-datetimepicker.js"></script>
+  <script src="./js/api.js"></script>
+  <script src="./js/number.js"></script>
+
+  <script>
+  function detectZoom() {
+        var ratio = 0,
+        screen = window.screen,
+        ua = navigator.userAgent.toLowerCase();
+        if (window.devicePixelRatio !== undefined) {
+            ratio = window.devicePixelRatio;
+        } else if (~ua.indexOf('msie')) {
+            if (screen.deviceXDPI && screen.logicalXDPI) {
+                ratio = screen.deviceXDPI / screen.logicalXDPI;
+            }
+        } else if (window.outerWidth !== undefined && window.innerWidth !== undefined) {
+            ratio = window.outerWidth / window.innerWidth;
+        }
+        if (ratio) {
+            ratio = Math.round(ratio * 100);
+        }
+        console.log(ratio)
+        return ratio;
+    };
+    var zppm = detectZoom()
+    var doc = document.body || document.getElementsByTagName("body")[0]
+    if (zppm != 125) {
+        doc.style.zoom = 100 + '%'
+    }
+  </script>
+</body>
+</html>
